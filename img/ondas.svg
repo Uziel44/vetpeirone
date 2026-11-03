@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <rect width="1440" height="520" fill="#750f1a"/>
+  <path fill="#d1734f" d="M0 0H470C420 100 330 140 270 225C215 305 100 318 0 392Z"/>
+  <path fill="#e7c393" d="M0 0H235C190 62 112 86 0 120Z"/>
+  <path fill="#d1734f" d="M1440 520H1090C1135 432 1238 412 1294 336C1350 262 1398 250 1440 218Z"/>
+  <path fill="#e7c393" d="M1440 520H1275C1318 474 1388 462 1440 430Z"/>
+</svg>
