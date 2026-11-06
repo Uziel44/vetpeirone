@@ -2,8 +2,8 @@ Fotos del mosaico de inicio, tomadas de Pexels (https://www.pexels.com).
 Licencia de Pexels: uso libre, incluso comercial, sin obligación de atribuir.
 https://www.pexels.com/license/
 
-caballo-palomino.jpg    https://www.pexels.com/photo/close-up-photo-of-brown-horse-1730760/
-caballo-pastura.jpg     https://www.pexels.com/photo/chestnut-horse-grazing-in-verdant-pasture-30692058/
+cerdo-colorado.jpg      https://www.pexels.com/photo/close-up-of-a-brown-pig-looking-at-camera-4892761/
+ovejas-pastura.jpg      https://www.pexels.com/photo/group-of-sheep-at-the-field-1113652/
 golden-retriever.jpg    https://www.pexels.com/photo/golden-retriever-portrait-in-soft-light-35439916/
 husky-siberiano.jpg     https://www.pexels.com/photo/portrait-photo-of-siberian-husky-4206711/
 gato-siames.jpg         https://www.pexels.com/photo/a-close-up-shot-of-a-siamese-cat-4697154/
