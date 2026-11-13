@@ -296,35 +296,69 @@ h1, h2, h3 {
 .rule { display: block; width: 52px; height: 3px; margin: 0 0 1.4rem; background: var(--terracotta-soft); }
 .rule-center { margin-left: auto; margin-right: auto; }
 
-/* ---------- Invitación ---------- */
+/* ---------- Casos clínicos ---------- */
 
-.invite {
+.clinical {
   padding: clamp(3rem, 7vw, 5.5rem) clamp(1rem, 3vw, 2rem);
-  background: var(--burgundy) url("img/ondas.svg") center / cover no-repeat;
+  background:
+    url("img/onda-sup.svg") top left / min(30vw, 470px) auto no-repeat,
+    url("img/onda-inf.svg") bottom right / min(26vw, 400px) auto no-repeat,
+    var(--burgundy);
+  text-align: center;
 }
-.invite-inner {
-  display: grid;
-  grid-template-columns: 1fr minmax(320px, 560px);
-  align-items: center;
-  gap: clamp(1.5rem, 5vw, 4rem);
-  max-width: var(--wrap);
-  margin: 0 auto;
-}
-.invite-tab {
-  justify-self: center;
-  width: min(100%, 300px);
-  padding: 1rem 1.25rem;
+.clinical-inner { max-width: 1100px; margin: 0 auto; }
+.clinical-title { margin-bottom: .8rem; color: #fff; font-size: clamp(2rem, 3.4vw, 2.75rem); }
+.clinical-lead { max-width: 52ch; margin: 0 auto 2.5rem; color: rgba(255, 255, 255, .92); font-size: 1.125rem; }
+
+.clinical-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 2.5rem; }
+.clinical-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 18px 36px -20px rgba(0, 0, 0, .55);
-}
-.invite-card {
-  padding: clamp(1.75rem, 3.5vw, 3rem);
-  background: rgba(255, 255, 255, .96);
   border-radius: var(--radius);
   box-shadow: 0 24px 48px -28px rgba(0, 0, 0, .6);
+  text-align: left;
 }
-.invite-card p { max-width: 46ch; margin-bottom: 1.5rem; }
+
+/* Fotos del caso: una sola, o una grande a la izquierda y dos apiladas a la derecha */
+.shots { display: grid; gap: 3px; aspect-ratio: 16 / 10; background: #fff; }
+.shots-1 { grid-template: 1fr / 1fr; }
+.shots-3 { grid-template: 1fr 1fr / 1fr 1fr; grid-template-areas: "a b" "a c"; }
+.shot { position: relative; overflow: hidden; min-width: 0; min-height: 0; background: var(--cream); }
+.shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); }
+.shot-a { grid-area: a; }
+.shot-b { grid-area: b; }
+.shot-c { grid-area: c; }
+.shot-tag {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: .2rem .6rem;
+  background: rgba(46, 27, 26, .85);
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: .95rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border-radius: 2px;
+}
+
+.clinical-body { display: flex; flex: 1; flex-direction: column; padding: clamp(1.25rem, 2.4vw, 1.75rem); }
+.clinical-name { margin-bottom: .6rem; font-size: 1.5rem; }
+.clinical-body p { margin: 0 0 .9rem; max-width: 60ch; }
+.clinical-body .clinical-result {
+  display: flex;
+  gap: .6rem;
+  align-items: flex-start;
+  margin: auto 0 0;
+  padding: .8rem .95rem;
+  background: var(--cream);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-weight: 500;
+}
+.clinical-result svg { flex: none; margin-top: .1rem; color: var(--burgundy); }
 
 /* ---------- Servicios ---------- */
 
@@ -480,9 +514,8 @@ h1, h2, h3 {
 
 @media (max-width: 900px) {
   .welcome-inner,
-  .services-inner,
-  .invite-inner { grid-template-columns: 1fr; }
-  .invite-tab { width: min(100%, 220px); }
+  .services-inner { grid-template-columns: 1fr; }
+  .clinical-grid { grid-template-columns: 1fr; max-width: 640px; margin-left: auto; margin-right: auto; }
   .contact-cols { grid-template-columns: 1fr 1fr; }
   .contact-actions { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; }
   .product-grid { grid-template-columns: repeat(2, 1fr); }
